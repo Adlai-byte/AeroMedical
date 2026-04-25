@@ -160,6 +160,45 @@ function ContactPage() {
         </div>
       </section>
 
+      {/* MAP */}
+      <section className="pb-20 sm:pb-24">
+        <div className="container-page">
+          <div className="mb-6 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="text-xs font-medium uppercase tracking-[0.18em] text-primary">
+                Find us
+              </p>
+              <h2 className="mt-2 font-display text-3xl font-semibold sm:text-4xl">
+                Visit our clinic
+              </h2>
+              <p className="mt-2 max-w-xl text-sm text-muted-foreground">
+                Conveniently located in San Isidro, Davao Region. Walk-ins welcome during clinic hours.
+              </p>
+            </div>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=San+Isidro+Davao+Oriental+Philippines"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex h-11 items-center justify-center rounded-full border border-border px-5 text-sm font-medium hover:bg-muted"
+            >
+              Get directions
+            </a>
+          </div>
+          <div className="overflow-hidden rounded-3xl border border-border shadow-soft">
+            <iframe
+              title="Aero Medical & Diagnostic Clinic location"
+              src="https://www.google.com/maps?q=San+Isidro+Davao+Oriental+Philippines&output=embed"
+              width="100%"
+              height="450"
+              style={{ border: 0, display: "block" }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      </section>
+
       <style>{`
         .form-input {
           width: 100%;
