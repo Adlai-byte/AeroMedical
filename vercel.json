@@ -3,11 +3,6 @@
   "outputDirectory": "dist/client",
   "installCommand": "npm install",
   "framework": null,
-  "functions": {
-    "api/ssr.js": {
-      "runtime": "@vercel/node@5"
-    }
-  },
   "routes": [
     { "src": "/assets/(.*)", "dest": "/assets/$1" },
     { "src": "/@tanstack-start/(.*)", "dest": "/@tanstack-start/$1" },
