@@ -24,6 +24,19 @@ export const Route = createFileRoute("/contact")({
 
 function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [service, setService] = useState("");
+
+  const bookTest = () => {
+    setSubmitted(false);
+    setService("Basic Wellness Package");
+    requestAnimationFrame(() => {
+      document.getElementById("appointment-form")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  };
+
 
   return (
     <SiteLayout>
