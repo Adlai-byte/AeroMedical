@@ -24,6 +24,19 @@ export const Route = createFileRoute("/contact")({
 
 function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [service, setService] = useState("");
+
+  const bookTest = () => {
+    setSubmitted(false);
+    setService("Basic Wellness Package");
+    requestAnimationFrame(() => {
+      document.getElementById("appointment-form")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  };
+
 
   return (
     <SiteLayout>
@@ -41,7 +54,7 @@ function ContactPage() {
         </div>
       </section>
 
-      <section className="py-20 sm:py-24">
+      <section id="appointment-form" className="py-20 sm:py-24 scroll-mt-24">
         <div className="container-page grid gap-10 lg:grid-cols-12">
           {/* FORM */}
           <div className="lg:col-span-7">
@@ -97,7 +110,12 @@ function ContactPage() {
 
                   <div className="grid gap-5 sm:grid-cols-2">
                     <Field label="Service / package" required>
-                      <select required className="form-input" defaultValue="">
+                      <select
+                        required
+                        className="form-input"
+                        value={service}
+                        onChange={(e) => setService(e.target.value)}
+                      >
                         <option value="" disabled>Select a service</option>
                         <option>Basic Wellness Package</option>
                         <option>Executive Check-up</option>
@@ -175,14 +193,23 @@ function ContactPage() {
                 Conveniently located in San Isidro, Davao Region. Walk-ins welcome during clinic hours.
               </p>
             </div>
-            <a
-              href="https://www.google.com/maps/search/?api=1&query=San+Isidro+Davao+Oriental+Philippines"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex h-11 items-center justify-center rounded-full border border-border px-5 text-sm font-medium hover:bg-muted"
-            >
-              Get directions
-            </a>
+            <div className="flex flex-wrap gap-3">
+              <button
+                type="button"
+                onClick={bookTest}
+                className="inline-flex h-11 items-center justify-center rounded-full bg-primary px-5 text-sm font-semibold text-primary-foreground shadow-glow transition-all hover:brightness-110"
+              >
+                Book a Test
+              </button>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=San+Isidro+Davao+Oriental+Philippines"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-11 items-center justify-center rounded-full border border-border px-5 text-sm font-medium hover:bg-muted"
+              >
+                Get directions
+              </a>
+            </div>
           </div>
           <div className="overflow-hidden rounded-3xl border border-border shadow-soft">
             <iframe
