@@ -1,0 +1,17 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist/client",
+  "installCommand": "npm install",
+  "framework": null,
+  "functions": {
+    "api/ssr.js": {
+      "runtime": "nodejs22.x"
+    }
+  },
+  "routes": [
+    { "src": "/assets/(.*)", "dest": "/assets/$1" },
+    { "src": "/@tanstack-start/(.*)", "dest": "/@tanstack-start/$1" },
+    { "src": "/@id/(.*)", "dest": "/@id/$1" },
+    { "src": "/(.*)", "dest": "/api/ssr.js" }
+  ]
+}
