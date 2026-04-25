@@ -54,7 +54,7 @@ function ContactPage() {
         </div>
       </section>
 
-      <section className="py-20 sm:py-24">
+      <section id="appointment-form" className="py-20 sm:py-24 scroll-mt-24">
         <div className="container-page grid gap-10 lg:grid-cols-12">
           {/* FORM */}
           <div className="lg:col-span-7">
