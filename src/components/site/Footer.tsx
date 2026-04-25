@@ -21,7 +21,7 @@ export function Footer() {
             Region — accurate results, friendly staff, fair prices.
           </p>
           <a
-            href="https://facebook.com"
+            href="https://www.facebook.com/aeromedclinic"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-5 inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
