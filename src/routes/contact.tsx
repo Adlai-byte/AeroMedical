@@ -193,14 +193,23 @@ function ContactPage() {
                 Conveniently located in San Isidro, Davao Region. Walk-ins welcome during clinic hours.
               </p>
             </div>
-            <a
-              href="https://www.google.com/maps/search/?api=1&query=San+Isidro+Davao+Oriental+Philippines"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex h-11 items-center justify-center rounded-full border border-border px-5 text-sm font-medium hover:bg-muted"
-            >
-              Get directions
-            </a>
+            <div className="flex flex-wrap gap-3">
+              <button
+                type="button"
+                onClick={bookTest}
+                className="inline-flex h-11 items-center justify-center rounded-full bg-primary px-5 text-sm font-semibold text-primary-foreground shadow-glow transition-all hover:brightness-110"
+              >
+                Book a Test
+              </button>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=San+Isidro+Davao+Oriental+Philippines"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-11 items-center justify-center rounded-full border border-border px-5 text-sm font-medium hover:bg-muted"
+              >
+                Get directions
+              </a>
+            </div>
           </div>
           <div className="overflow-hidden rounded-3xl border border-border shadow-soft">
             <iframe
