@@ -632,3 +632,31 @@ function HomePage() {
     </SiteLayout>
   );
 }
+
+function GalleryItem({
+  src,
+  alt,
+  className = "",
+}: {
+  src: string;
+  alt: string;
+  className?: string;
+}) {
+  return (
+    <figure
+      className={`group relative overflow-hidden rounded-2xl border border-border bg-muted shadow-soft ${className}`}
+    >
+      <img
+        src={src}
+        alt={alt}
+        loading="lazy"
+        width={1024}
+        height={768}
+        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+      <figcaption className="pointer-events-none absolute inset-x-0 bottom-0 translate-y-2 bg-gradient-to-t from-black/70 via-black/20 to-transparent p-4 text-xs font-medium text-white opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+        {alt}
+      </figcaption>
+    </figure>
+  );
+}
