@@ -110,7 +110,12 @@ function ContactPage() {
 
                   <div className="grid gap-5 sm:grid-cols-2">
                     <Field label="Service / package" required>
-                      <select required className="form-input" defaultValue="">
+                      <select
+                        required
+                        className="form-input"
+                        value={service}
+                        onChange={(e) => setService(e.target.value)}
+                      >
                         <option value="" disabled>Select a service</option>
                         <option>Basic Wellness Package</option>
                         <option>Executive Check-up</option>
