@@ -19,6 +19,12 @@ import {
 import { SiteLayout } from "@/components/site/SiteLayout";
 import heroImg from "@/assets/hero-clinic.jpg";
 import labImg from "@/assets/lab-equipment.jpg";
+import galleryLab from "@/assets/gallery-lab.jpg";
+import galleryNurse from "@/assets/gallery-nurse.jpg";
+import galleryReception from "@/assets/gallery-reception.jpg";
+import galleryTech from "@/assets/gallery-tech.jpg";
+import galleryXray from "@/assets/gallery-xray.jpg";
+import galleryConsult from "@/assets/gallery-consult.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
