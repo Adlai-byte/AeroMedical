@@ -519,6 +519,32 @@ function HomePage() {
         </div>
       </section>
 
+      {/* GALLERY */}
+      <section className="py-20 sm:py-24">
+        <div className="container-page">
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="text-xs font-medium uppercase tracking-[0.18em] text-primary">
+              Inside the clinic
+            </p>
+            <h2 className="mt-3 font-display text-3xl font-semibold sm:text-4xl">
+              A space built for confidence and care.
+            </h2>
+            <p className="mt-3 text-muted-foreground">
+              Take a look around our laboratory, consultation rooms, and diagnostic suites.
+            </p>
+          </div>
+
+          <div className="mt-12 grid auto-rows-[180px] grid-cols-2 gap-3 sm:auto-rows-[220px] sm:gap-4 md:grid-cols-4">
+            <GalleryItem src={galleryLab} alt="Modern laboratory with microscopes" className="md:col-span-2 md:row-span-2" />
+            <GalleryItem src={galleryNurse} alt="Nurse caring for a patient" />
+            <GalleryItem src={galleryReception} alt="Welcoming clinic reception area" />
+            <GalleryItem src={galleryTech} alt="Lab technician analyzing samples" />
+            <GalleryItem src={galleryXray} alt="X-ray and ECG diagnostic suite" />
+            <GalleryItem src={galleryConsult} alt="Doctor in consultation with patient" className="md:col-span-2" />
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="bg-surface py-20 sm:py-24">
         <div className="container-page grid gap-12 lg:grid-cols-12">
